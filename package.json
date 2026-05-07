@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "start:api": "node apiServer.js",
+    "dev:api": "nodemon apiServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +19,8 @@
     "express": "^4.21.2",
     "method-override": "^3.0.0",
     "mysql2": "^3.12.0",
-    "uuid": "^11.1.0"
+    "uuid": "^11.1.0",
+    "nodemon": "^2.0.22",
+    "cors": "^2.8.5"
   }
 }

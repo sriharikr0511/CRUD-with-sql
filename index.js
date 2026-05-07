@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const { faker } = require('@faker-js/faker');
 const mysql = require('mysql2');
 const app = express();
-const port = 8080;
+const port = 7000;
 
 //parsing data for POST method
 app.use(mover("_method"));
@@ -15,6 +15,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
+// API is served by a separate process (apiServer.js)
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

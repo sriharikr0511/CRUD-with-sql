@@ -55,7 +55,7 @@ Start the server with Node:
 node index.js
 ```
 
-By default the app listens on port 8080; open `http://localhost:8080` (or the host/port you configure).
+By default the frontend app listens on port 7000 and the API server listens on port 7001; open `http://localhost:7000` for the frontend and `http://localhost:7001/api/users` for the API (or adjust the ports in `index.js` / `apiServer.js`).
 
 You can also add a script to `package.json`:
 
@@ -84,7 +84,7 @@ The project uses `method-override` to support PATCH/DELETE from HTML forms.
 
 - If you cannot run the SQL script from the CLI, run it using a GUI client or provide the full path to the MySQL client binary.
 - If the app cannot connect to the database, verify server availability and credentials, and ensure the target database exists.
-- If port 8080 is in use, change the `port` value in `index.js`.
+-- If port 7000 is in use, change the `port` value in `index.js`. If port 7001 is in use, change the `port` value in `apiServer.js`.
 
 ## Security notes
 
